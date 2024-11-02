@@ -1,0 +1,46 @@
+.main {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.productManagement {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.title h2 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #282828;
+  width: 150px;
+}
+
+.addProductBtn {
+  width: 132px;
+  height: 45px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #55a3f0;
+  color: #ffffff;
+  border: none;
+}
+
+.button {
+  padding: 3px 15px;
+  margin: 5px;
+}
+
+.disableBtn {
+  padding: 3px 15px;
+  cursor: not-allowed;
+  opacity: 0.6;
+  margin: 5px;
+  pointer-events: none;
+}

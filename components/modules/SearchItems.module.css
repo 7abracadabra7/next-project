@@ -1,0 +1,37 @@
+.searchBox {
+    width: 100%;
+    position: relative;
+  }
+  
+  .searchBox input {
+    width: 100%;
+    height: 68px;
+    border-radius: 2rem;
+    border: 1px solid #e4e4e4;
+    padding-right: 50px;
+  }
+  
+  .searchBox input::placeholder {
+    position: absolute;
+    right: 45px;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    top: 34px;
+    transform: translateY(-50%);
+    right: 15px;
+  }
+  
+  .userInfo {
+    display: flex;
+    gap: 5px;
+    border-right: 1px solid #e4e4e4;
+    padding-right: 10px;
+    align-items: center;
+    position: absolute;
+    top: 34px;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+  
