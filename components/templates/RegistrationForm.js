@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/form.module.css";
+import styles from "../../styles/form.module.css";
 import Image from "next/image";
 
 const RegistrationForm = () => {
