@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import Modal from "react-modal";
 import styles from "./AddModal.module.css";
 import { useContext, useState } from "react";
-import { ModalContext } from "../providers/ContextProvider";
+import { ModalContext } from "../../providers/ContextProvider";
 
 const AddModal = () => {
   const {
@@ -20,8 +20,8 @@ const AddModal = () => {
   const onSubmit = (product) => {
     console.log("product", product);
     mutate(product, {
-      onSuccess: (data) => console.log(data),
-      onError: (error) => console.log(error),
+      onSuccess: (data) => console.log("data added:", data),
+      onError: (error) => console.log("data didn't send", error),
     });
     toggleModal("addModal");
   };
@@ -76,9 +76,9 @@ const AddModal = () => {
           >
             انصراف
           </button>
-          {/* {errors.name && (
+          {errors.name && (
             <span className={styles.error}>{errors.name.message}</span>
-          )} */}
+          )}
         </form>
       </Modal>
     </div>

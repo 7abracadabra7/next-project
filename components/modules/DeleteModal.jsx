@@ -1,9 +1,8 @@
 import Modal from "react-modal";
 import styles from "./DeleteModal.module.css";
 import { useContext } from "react";
-import { ModalContext } from "../providers/ContextProvider";
-import deleteImg from "../images/Close.png";
-import { useDeleteProduct } from "../services/mutations";
+import { ModalContext } from "../../providers/ContextProvider";
+import { useDeleteProduct } from "../../services/mutations";
 
 const DeleteModal = () => {
   const { modalStates, toggleModal, setSelectedProduct, selectedProduct } =

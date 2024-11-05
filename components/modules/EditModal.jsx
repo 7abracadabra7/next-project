@@ -1,7 +1,7 @@
-import { useEditProduct } from "../services/mutations";
+import { useEditProduct } from "../../services/mutations";
 import { useForm } from "react-hook-form";
 import { useContext, useEffect } from "react";
-import { ModalContext } from "../providers/ContextProvider";
+import { ModalContext } from "../../providers/ContextProvider";
 import Modal from "react-modal";
 import styles from "./AddModal.module.css";
 

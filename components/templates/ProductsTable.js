@@ -1,8 +1,8 @@
-import productData from "../../data/productData";
+
 import ProductCard from "../modules/ProductCard";
 import styles from "./ProductTable.module.css";
 
-const ProductsTable = () => {
+const ProductsTable = ({ data, isLoading, isError }) => {
   return (
     <div className={styles.container}>
       <table className={styles.productTable}>
@@ -16,8 +16,8 @@ const ProductsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {productData &&
-            productData.map((product) => (
+          {data &&
+            data.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
         </tbody>

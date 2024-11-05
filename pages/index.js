@@ -52,25 +52,27 @@ export default function Home() {
           {modalStates.addModal && <AddModal />}
           {modalStates.editModal && <EditModal />}
           {modalStates.deleteModal && <DeleteModal />}
-          <ProductsTable           data={data.data}
-          isLoading={isLoading}
-          isError={isError}/>
+          <ProductsTable
+            data={data.data}
+            isLoading={isLoading}
+            isError={isError}
+          />
         </div>
         <button
-        className={pageNumber == 1 ? styles.disableBtn : styles.button}
-        onClick={() => setPageNumber((page) => page - 1)}
-      >
-        قبل
-      </button>
-      <span>{pageNumber}</span>
-      <button
-        className={
-          pageNumber == data.totalPages ? styles.disableBtn : styles.button
-        }
-        onClick={() => setPageNumber((page) => page + 1)}
-      >
-        بعد
-      </button>
+          className={pageNumber == 1 ? styles.disableBtn : styles.button}
+          onClick={() => setPageNumber((page) => page - 1)}
+        >
+          قبل
+        </button>
+        <span>{pageNumber}</span>
+        <button
+          className={
+            pageNumber == data.totalPages ? styles.disableBtn : styles.button
+          }
+          onClick={() => setPageNumber((page) => page + 1)}
+        >
+          بعد
+        </button>
       </div>
     </>
   );
