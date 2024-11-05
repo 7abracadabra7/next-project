@@ -1,97 +1,94 @@
 .container {
-    margin: auto;
-    text-align: center;
-  }
-  
-  .header {
-    margin-top: 10px;
-    font-size: 25px;
-    font-weight: 700;
-    font-family: "Cairo", sans-serif;
-    margin-bottom: 115px;
-  }
-  
-  .form {
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    padding: 20px 25px 20px 35px;
-    width: 460px;
-    border-radius: 40px;
-    background-color: #ffffff;
-    border: 1px solid #e4e4e4;
-  }
-  
- 
-  
-  .topSide h1 {
-    font-size: 1.5rem;
-    font: 500;
-    margin-bottom: 63px;
-  }
-  
-  .inputContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-  }
-  
-  .inputContainer input {
-    width: 100%;
-    background: #f2f2f2;
-    color: #28282880;
-    height: 53px;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    padding: 15px;
-    font-family: "Vazirmatn", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: #28282880;
-  }
-  
-  .formButton {
-    margin-top: 35px;
-    width: 400px;
-    height: 53px;
-    padding: 10px;
-    border-radius: 15px;
-    background-color: #55a3f0;
-    font-family: Vazirmatn;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    outline: none;
-  }
-  
-  .link {
-    font-family: Vazirmatn;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #3a8bed;
-  }
-  
-  .rightAlign {
-    text-align: right;
-    margin-top: 16px;
-  }
-  
-  input.normal::placeholder {
-    color: gray;
-  }
-  
-  input.error::placeholder {
-    color: red;
-  }
-  
-  p.error {
-    color: red;
-    margin-top: 15px;
-  }
-  
+  margin: auto;
+  text-align: center;
+}
+
+.header {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Cairo", sans-serif;
+  margin-bottom: 115px;
+}
+
+.form {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  padding: 20px 25px 20px 35px;
+  width: 460px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+}
+
+.topSide h1 {
+  font-size: 1.5rem;
+  font: 500;
+  margin-bottom: 63px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.inputContainer input {
+  width: 100%;
+  background: #f2f2f2;
+  color: #28282880;
+  height: 53px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #28282880;
+}
+
+.formButton {
+  margin-top: 35px;
+  width: 400px;
+  height: 53px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #55a3f0;
+  font-family: Vazirmatn;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.link {
+  font-family: Vazirmatn;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #3a8bed;
+}
+
+.rightAlign {
+  text-align: right;
+  margin-top: 16px;
+}
+
+input.normal::placeholder {
+  color: gray;
+}
+
+input.error::placeholder {
+  color: red;
+}
+
+p.error {
+  color: red;
+  margin-top: 15px;
+}

@@ -1,0 +1,52 @@
+.modalContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 472px;
+  max-width: 460px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 65px;
+  text-align: center;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.deleteImg {
+  margin-bottom: 64px;
+}
+
+.title {
+  margin-bottom: 25px;
+}
+
+.cancelBtn {
+  width: 160px;
+  height: 42px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.submitBtn {
+  width: 160px;
+  height: 42px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #f43f5e;
+  color: white;
+  margin-left: 10px;
+}

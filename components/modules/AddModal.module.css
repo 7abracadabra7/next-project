@@ -1,0 +1,69 @@
+.modalContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 460px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 35px;
+  text-align: center;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.form {
+  text-align: right;
+}
+
+.modalContent h2 {
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+}
+.form input {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 2rem;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+.form button {
+  width: 185px;
+  height: 42px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.submitBtn {
+  background-color: #55a3f0;
+  color: white;
+  margin-left: 20px;
+}
+
+input.normal::placeholder {
+  color: gray;
+}
+
+input.error::placeholder {
+  color: red;
+}
