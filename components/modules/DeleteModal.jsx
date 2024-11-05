@@ -3,6 +3,7 @@ import styles from "./DeleteModal.module.css";
 import { useContext } from "react";
 import { ModalContext } from "../../providers/ContextProvider";
 import { useDeleteProduct } from "../../services/mutations";
+import Image from "next/image";
 
 const DeleteModal = () => {
   const { modalStates, toggleModal, setSelectedProduct, selectedProduct } =
@@ -41,7 +42,8 @@ const DeleteModal = () => {
         overlayClassName={styles.modalOverlay}
         contentLabel="Delete Product"
       >
-        <img src={deleteImg} className={styles.deleteImg} alt="deleteIcon" />
+        <Image src="/trash.png" className={styles.deleteImg} width={30} height={20} />
+        {/* <img src={deleteImg} className={styles.deleteImg} alt="deleteIcon" /> */}
         <h2 className={styles.title}>آیا از حذف این محصول مطمئن هستید؟</h2>
         <button
           className={styles.submitBtn}
