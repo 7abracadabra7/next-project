@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Modal from "react-modal";
 import styles from "./AddModal.module.css";
 import { useContext, useState } from "react";
+import { useRouter } from "next/router";
 import { ModalContext } from "../../providers/ContextProvider";
 
 const AddModal = () => {
@@ -13,9 +14,15 @@ const AddModal = () => {
   } = useForm();
   const { modalStates, toggleModal } = useContext(ModalContext);
 
+  const router = useRouter();
+  const onTokenInvalid = () => {
+    console.log("Token is invalid, redirecting to login...");
+    router.push("/login");
+  };
+
   //====================== Mutate Product =============================
 
-  const { mutate } = useProduct();
+  const { mutate } = useProduct(onTokenInvalid);
 
   const onSubmit = (product) => {
     console.log("product", product);

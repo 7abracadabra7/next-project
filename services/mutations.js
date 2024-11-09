@@ -17,7 +17,7 @@ const useLogin = () => {
   return useMutation({ mutationFn });
 };
 
-const useProduct = () => {
+const useProduct = (onTokenInvalid) => {
   const queryClient = useQueryClient();
   const mutationFn = (info) => {
     return api.post("products", info);
@@ -25,7 +25,15 @@ const useProduct = () => {
   const onSuccess = async () => {
     await queryClient.invalidateQueries({ queryKey: ["products"] });
   };
-  return useMutation({ mutationFn, onSuccess });
+  const onError = (error) => {
+    if (
+      error.response &&
+      error.response.data.message === "Invalid or expired token"
+    ) {
+      onTokenInvalid();
+    }
+  };
+  return useMutation({ mutationFn, onSuccess, onError });
 };
 
 const useDeleteProduct = () => {
