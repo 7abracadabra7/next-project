@@ -14,6 +14,8 @@ const ContextProvider = ({ children }) => {
 
   const [selectedProduct, setSelectedProduct] = useState("");
 
+  const [apiResponse, setApiResponse] = useState(null);
+
   return (
     <ModalContext.Provider
       value={{
@@ -22,6 +24,8 @@ const ContextProvider = ({ children }) => {
         toggleModal,
         setSelectedProduct,
         selectedProduct,
+        apiResponse,
+        setApiResponse,
       }}
     >
       {children}

@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useLogin } from "../../services/mutations";
-import { setCookie } from "../../utils/cookie";
+// import { setCookie } from "../../utils/cookie";
+import Cookies from "js-cookie";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -21,7 +22,8 @@ const LoginForm = () => {
     mutate(data, {
       onSuccess: (data) => {
         console.log("data sent", data.data.token);
-        setCookie("token", data.data.token);
+        // setCookie("token", data.data.token);
+        Cookies.set("token", `${data.data.token}`, { expires: 7 });
         router.push("/");
       },
       onError: (error) => {

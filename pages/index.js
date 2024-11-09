@@ -12,7 +12,7 @@ import { ModalContext } from "../providers/ContextProvider";
 
 export default function Home() {
   //======================= Modal ========================
-  const { toggleModal, modalStates } = useContext(ModalContext);
+  const { toggleModal, modalStates , apiResponse } = useContext(ModalContext);
   const [pageNumber, setPageNumber] = useState(1);
   const [searchItem, setSearchItem] = useState("");
 
@@ -27,6 +27,8 @@ export default function Home() {
 
   if (error) return <p>Something went wrong!</p>;
   console.log(data.data);
+
+
 
   //==========================================================
 
