@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { api } from "./config";
 
+
 const useFetchProducts = (page, name) => {
   let queryKey = null;
   if (page) {
@@ -16,8 +17,10 @@ const useFetchProducts = (page, name) => {
     return response.data;
   };
 
+
+
+
   return useQuery({ queryKey, queryFn });
 };
-
 
 export { useFetchProducts };

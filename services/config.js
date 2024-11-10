@@ -1,13 +1,6 @@
 import axios from "axios";
-// import { useRouter } from "next/router";
 import Cookies from "js-cookie";
-// import { tokenExpirationHandler } from "../utils/tokenExpirationHandler";
-
-let onTokenInvalidGlobal;
-
-const setOnTokenInvalid = (callback) => {
-  onTokenInvalidGlobal = callback;
-};
+import { handleResponseError } from "../utils/tokenExpirationHandler";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
@@ -16,22 +9,17 @@ const api = axios.create({
   },
 });
 
-
-
-const handleResponseError = (error, onTokenInvalid) => {
-  console.log("API Error:", error);
-  if (
-    error.response &&
-    error.response.data &&
-    error.response.data.message === "Invalid or expired token"
-  ) {
-    console.log("YESSS");
-    if (onTokenInvalidGlobal) {
-      onTokenInvalidGlobal(); // Call the global callback
-    }
-  }
-  return Promise.reject(error);
-};
+// const handleResponseError = (error) => {
+//   console.log("API Error:", error);
+//   if (
+//     error.response &&
+//     error.response.data &&
+//     error.response.data.message === "Invalid or expired token"
+//   ) {
+//     Router.push("/login")
+//   }
+//   return Promise.reject(error);
+// };
 
 api.interceptors.response.use(
   (response) => {
@@ -41,9 +29,6 @@ api.interceptors.response.use(
   (error) => {
     console.log(error);
     return handleResponseError(error);
-    // return handleResponseError(error, onTokenInvalid);
-    // tokenExpirationHandler(error, router);
-    // return Promise.reject(error);
   }
 );
 

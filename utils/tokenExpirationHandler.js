@@ -1,12 +1,13 @@
-export const tokenExpirationHandler = (error, router) => {
-    console.log("token exp")
-  console.log(error, router);
+import Router from "next/router";
+
+export const handleResponseError = (error) => {
+  console.log("API Error:", error);
   if (
     error.response &&
+    error.response.data &&
     error.response.data.message === "Invalid or expired token"
   ) {
-    console.log("Token expired, redirecting to login");
-    router.push("/login");
+    Router.push("/login");
   }
+  return Promise.reject(error);
 };
-
