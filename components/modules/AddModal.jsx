@@ -2,17 +2,20 @@ import { useProduct } from "../../services/mutations";
 import { useForm } from "react-hook-form";
 import Modal from "react-modal";
 import styles from "./AddModal.module.css";
-import { useContext } from "react";
+import { useContext} from "react";
 import { ModalContext } from "../../providers/ContextProvider";
 
-
 const AddModal = () => {
+  const { modalStates, toggleModal } = useContext(ModalContext);
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { modalStates, toggleModal } = useContext(ModalContext);
+
+
 
   //====================== Mutate Product =============================
 
@@ -26,7 +29,6 @@ const AddModal = () => {
     });
     toggleModal("addModal");
   };
-
 
   return (
     <div>
@@ -56,7 +58,7 @@ const AddModal = () => {
                 required: "لطفا تعداد را وارد کنید ",
               })}
               type="number"
-              placeholder={errors.name ? errors.quantity.message : "تعداد "}
+              placeholder={errors.quantity ? errors.quantity.message : "تعداد "}
               className={errors.quantity ? styles.error : styles.normal}
             />
             <label> قیمت</label>
@@ -65,7 +67,7 @@ const AddModal = () => {
               id="price"
               {...register("price", { required: "لطفا قیمت را وارد کنید" })}
               type="number"
-              placeholder={errors.name ? errors.price.message : "قیمت"}
+              placeholder={errors.price ? errors.price.message : "قیمت"}
               className={errors.price ? styles.error : styles.normal}
             />
           </div>
@@ -79,9 +81,9 @@ const AddModal = () => {
           >
             انصراف
           </button>
-          {errors.name && (
+          {/* {errors.name && (
             <span className={styles.error}>{errors.name.message}</span>
-          )}
+          )} */}
         </form>
       </Modal>
     </div>

@@ -20,7 +20,7 @@ const LoginForm = () => {
   const onSubmit = (data) => {
     mutate(data, {
       onSuccess: (data) => {
-        Cookies.set("token", `${data.data.token}ff`, { expires: 7 });
+        Cookies.set("token", `${data.data.token}`, { expires: 7 });
         console.log("data sent", Cookies.get("token"));
         router.push("/");
       },
